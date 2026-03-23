@@ -1,0 +1,15 @@
+% Программа: формирование списка цифр числа N
+number_to_list_acc(0, Acc, Acc) :- !.
+number_to_list_acc(N, Acc, L) :-
+    N > 0,
+    Digit is N mod 10,
+    N1 is N // 10,
+    number_to_list_acc(N1, [Digit|Acc], L).
+number_to_list(N, L) :-
+    number_to_list_acc(N, [], L).
+start :-
+    write('Введите натуральное число N: '),
+    read(N),
+    number_to_list(N, L),
+    write('Список цифр числа '), write(N), write(': '), write(L), nl.
+:- start.

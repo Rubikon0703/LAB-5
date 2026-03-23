@@ -1,0 +1,19 @@
+% Программа: формирование списка цифр числа N
+
+% Предикат: число -> список цифр
+number_to_list(0, []) :- !.
+number_to_list(N, [Digit|Rest]) :-
+    N > 0,
+    Digit is N mod 10,
+    N1 is N // 10,
+    number_to_list(N1, Rest).
+
+% Основная программа с вводом и выводом
+run :-
+    write('Введите натуральное число N: '),
+    read(N),
+    number_to_list(N, L),
+    write('Список цифр числа '), write(N), write(': '), write(L), nl.
+
+% Цель программы
+:- run.

@@ -1,0 +1,30 @@
+% Программа: подсчет минимальных элементов
+
+find_min([X], X).
+find_min([H|T], Min) :-
+    find_min(T, MinTail),
+    H < MinTail,
+    Min = H.
+find_min([H|T], Min) :-
+    find_min(T, Min),
+    H >= Min.
+
+count([], _, 0).
+count([H|T], X, N) :-
+    H = X,
+    count(T, X, N1),
+    N is N1 + 1.
+count([H|T], X, N) :-
+    H \= X,
+    count(T, X, N).
+
+go :-
+    write('Введите список натуральных чисел в формате [1,2,3,4,5].'), nl,
+    write('Ваш список: '),nl,
+    read(List),
+    find_min(List, Min),
+    count(List, Min, Count),
+    write('Список: '), write(List), nl,
+    write('Минимальный элемент: '), write(Min), nl,
+    write('Количество вхождений: '), write(Count), write(' раз(а)').
+    :- go.
