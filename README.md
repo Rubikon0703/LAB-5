@@ -23,7 +23,7 @@
 
 
 ### Тестирование
-
+![pasted image 1.png](https://github.com/Rubikon0703/LAB-5/blob/main/скрины/1.png)
 
 # Задание 2
 
@@ -41,7 +41,7 @@
 Вывести минимальный элемент и количество его вхождений
 
 ### Тестирование
-
+![pasted image 2.png](https://github.com/Rubikon0703/LAB-5/blob/main/скрины/2.png)
 
 
 
@@ -65,7 +65,7 @@
 поэлементно сравнивая каждый элемент со вторым множеством
 Объединить полученные списки
 ### Тестирование
-
+![pasted image 3.png](https://github.com/Rubikon0703/LAB-5/blob/main/скрины/3.png)
 
 
 
@@ -101,5 +101,5 @@
 Вывести найденное решение
 
 ### Тестирование
-
+![pasted image 4.png](https://github.com/Rubikon0703/LAB-5/blob/main/скрины/4.png)
 
